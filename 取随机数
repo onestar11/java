@@ -1,0 +1,19 @@
+package project1;
+
+
+public class Project1 {
+	/** Generate a random character between ch1 and ch2*/
+	public static char getRandomCharacter(char ch1,char ch2) {
+		double a= Math.random();
+		return(char)(ch1+a*(ch2-ch1+1));//向下取整
+	}
+	
+	/**Generate a random lowercase letter*/
+	public static char getRandomLowerCaseLetter() {
+		return getRandomCharacter('a','z');
+	}
+	public static void main(String[] args) {
+		char c=getRandomLowerCaseLetter();
+		System.out.println(c);
+	} 
+}	
