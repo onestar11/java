@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class TestLocation {
+
+	public static void main(String[] args) {
+		System.out.print("Enter the number of rows and columns in the array:");
+		Scanner input = new Scanner(System.in);
+		int rows = input.nextInt();
+		int columns = input.nextInt();
+
+		double [][]array=new double[rows][columns];
+		System.out.println("Enter the array:");
+		getArray(array);
+		input.close();
+		Location a=new Location();
+		Location b=new Location();
+		b=a.locateLargest(array);
+		System.out.println("The location of the largest element is "+b.maxValue+" at "+"("+b.row+","+b.column+")");
+	}
+	
+	  
+	
+	 public static void getArray(double[][] m){ 
+		int i,j;
+		Scanner input=new Scanner(System.in);
+	 	for(i=0;i<m. length;i++) { 
+	 		for(j=0;j<m[i].length;j++) {
+	 			m[i][j]=input.nextInt();
+	 		} 
+	 	}
+	 	input.close();
+	 }
+	 
+	 
+}
